@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdateViewController">
+            <connections>
+                <outlet property="controlButton" destination="Yo4-6p-pbH" id="0mp-CH-VG7"/>
+                <outlet property="progressView" destination="iDT-Iw-qz2" id="xOk-dR-GVU"/>
+                <outlet property="swiftControlBtn" destination="Tjn-1s-fdd" id="2lC-f1-dFJ"/>
+                <outlet property="swiftProgressView" destination="7MR-r1-rIF" id="SrA-7M-Xi7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="71E-0m-DBY">
+                    <rect key="frame" x="50" y="150" width="275" height="102"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yo4-6p-pbH">
+                            <rect key="frame" x="0.0" y="0.0" width="275" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="EG0-6z-WPQ"/>
+                            </constraints>
+                            <state key="normal" title="OC开始升级"/>
+                            <state key="selected" title="OC取消升级"/>
+                            <connections>
+                                <action selector="start:" destination="-1" eventType="touchUpInside" id="mH6-FT-eza"/>
+                            </connections>
+                        </button>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iDT-Iw-qz2">
+                            <rect key="frame" x="0.0" y="100" width="275" height="2"/>
+                        </progressView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Spb-ra-uDC">
+                    <rect key="frame" x="50" y="297" width="275" height="102"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjn-1s-fdd">
+                            <rect key="frame" x="0.0" y="0.0" width="275" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="aJE-XE-UYN"/>
+                            </constraints>
+                            <state key="normal" title="Swift开始升级"/>
+                            <state key="selected" title="Swift取消升级"/>
+                            <connections>
+                                <action selector="swiftStart:" destination="-1" eventType="touchUpInside" id="3x2-gT-RGu"/>
+                            </connections>
+                        </button>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7MR-r1-rIF">
+                            <rect key="frame" x="0.0" y="100" width="275" height="2"/>
+                        </progressView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="71E-0m-DBY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="BrR-Pr-eSH"/>
+                <constraint firstAttribute="trailing" secondItem="71E-0m-DBY" secondAttribute="trailing" constant="50" id="N9s-Hw-ggD"/>
+                <constraint firstItem="71E-0m-DBY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="Sfb-Qt-ULw"/>
+                <constraint firstAttribute="trailing" secondItem="Spb-ra-uDC" secondAttribute="trailing" constant="50" id="hcF-xA-GS8"/>
+                <constraint firstItem="Spb-ra-uDC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="nD9-df-CXb"/>
+                <constraint firstItem="Spb-ra-uDC" firstAttribute="top" secondItem="71E-0m-DBY" secondAttribute="bottom" constant="45" id="zIG-a1-cOU"/>
+            </constraints>
+            <point key="canvasLocation" x="-57" y="-13"/>
+        </view>
+    </objects>
+</document>

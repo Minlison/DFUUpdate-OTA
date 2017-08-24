@@ -1,0 +1,6 @@
+framework module Pods_DFU {
+  umbrella header "Pods-DFU-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,926 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1029BE01B58319FE698F249F /* Pods_DFU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D7366B4E138BC85C8138DF /* Pods_DFU.framework */; };
+		F3979A8C1F4AB1EA001FA6B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979A8B1F4AB1EA001FA6B7 /* main.m */; };
+		F3979A8F1F4AB1EA001FA6B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979A8E1F4AB1EA001FA6B7 /* AppDelegate.m */; };
+		F3979A921F4AB1EA001FA6B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979A911F4AB1EA001FA6B7 /* ViewController.m */; };
+		F3979A951F4AB1EA001FA6B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3979A931F4AB1EA001FA6B7 /* Main.storyboard */; };
+		F3979A971F4AB1EA001FA6B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3979A961F4AB1EA001FA6B7 /* Assets.xcassets */; };
+		F3979A9A1F4AB1EA001FA6B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3979A981F4AB1EA001FA6B7 /* LaunchScreen.storyboard */; };
+		F3979AAA1F4AB1F6001FA6B7 /* DFUManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AA81F4AB1F6001FA6B7 /* DFUManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3979AAD1F4AB1F6001FA6B7 /* DFUManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3979AA61F4AB1F6001FA6B7 /* DFUManager.framework */; };
+		F3979AAE1F4AB1F6001FA6B7 /* DFUManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3979AA61F4AB1F6001FA6B7 /* DFUManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3979ADC1F4AB2A8001FA6B7 /* Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AB41F4AB2A8001FA6B7 /* Utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3979ADD1F4AB2A8001FA6B7 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979AB51F4AB2A8001FA6B7 /* Utility.m */; };
+		F3979ADE1F4AB2A8001FA6B7 /* BLEOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AB71F4AB2A8001FA6B7 /* BLEOperations.h */; };
+		F3979ADF1F4AB2A8001FA6B7 /* BLEOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979AB81F4AB2A8001FA6B7 /* BLEOperations.m */; };
+		F3979AE01F4AB2A8001FA6B7 /* DFUOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AB91F4AB2A8001FA6B7 /* DFUOperations.h */; };
+		F3979AE11F4AB2A8001FA6B7 /* DFUOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979ABA1F4AB2A8001FA6B7 /* DFUOperations.m */; };
+		F3979AE21F4AB2A8001FA6B7 /* DFUOperationsDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979ABB1F4AB2A8001FA6B7 /* DFUOperationsDetails.h */; };
+		F3979AE31F4AB2A8001FA6B7 /* DFUOperationsDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979ABC1F4AB2A8001FA6B7 /* DFUOperationsDetails.m */; };
+		F3979AE41F4AB2A8001FA6B7 /* FileOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979ABD1F4AB2A8001FA6B7 /* FileOperations.h */; };
+		F3979AE51F4AB2A8001FA6B7 /* FileOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979ABE1F4AB2A8001FA6B7 /* FileOperations.m */; };
+		F3979AE61F4AB2A8001FA6B7 /* DFUHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AC01F4AB2A8001FA6B7 /* DFUHelper.h */; };
+		F3979AE71F4AB2A8001FA6B7 /* DFUHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979AC11F4AB2A8001FA6B7 /* DFUHelper.m */; };
+		F3979AEA1F4AB2A8001FA6B7 /* IntelHex2BinConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AC51F4AB2A8001FA6B7 /* IntelHex2BinConverter.h */; };
+		F3979AEB1F4AB2A8001FA6B7 /* IntelHex2BinConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979AC61F4AB2A8001FA6B7 /* IntelHex2BinConverter.m */; };
+		F3979AEC1F4AB2A8001FA6B7 /* InitData.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AC81F4AB2A8001FA6B7 /* InitData.h */; };
+		F3979AED1F4AB2A8001FA6B7 /* InitData.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979AC91F4AB2A8001FA6B7 /* InitData.m */; };
+		F3979AEE1F4AB2A8001FA6B7 /* JsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979ACA1F4AB2A8001FA6B7 /* JsonParser.h */; };
+		F3979AEF1F4AB2A8001FA6B7 /* JsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979ACB1F4AB2A8001FA6B7 /* JsonParser.m */; };
+		F3979AF01F4AB2A8001FA6B7 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979ACE1F4AB2A8001FA6B7 /* crypt.h */; };
+		F3979AF11F4AB2A8001FA6B7 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = F3979ACF1F4AB2A8001FA6B7 /* ioapi.c */; };
+		F3979AF21F4AB2A8001FA6B7 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AD01F4AB2A8001FA6B7 /* ioapi.h */; };
+		F3979AF31F4AB2A8001FA6B7 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = F3979AD11F4AB2A8001FA6B7 /* mztools.c */; };
+		F3979AF41F4AB2A8001FA6B7 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AD21F4AB2A8001FA6B7 /* mztools.h */; };
+		F3979AF51F4AB2A8001FA6B7 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = F3979AD31F4AB2A8001FA6B7 /* unzip.c */; };
+		F3979AF61F4AB2A8001FA6B7 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AD41F4AB2A8001FA6B7 /* unzip.h */; };
+		F3979AF71F4AB2A8001FA6B7 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = F3979AD51F4AB2A8001FA6B7 /* zip.c */; };
+		F3979AF81F4AB2A8001FA6B7 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AD61F4AB2A8001FA6B7 /* zip.h */; };
+		F3979AF91F4AB2A8001FA6B7 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AD71F4AB2A8001FA6B7 /* SSZipArchive.h */; };
+		F3979AFA1F4AB2A8001FA6B7 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979AD81F4AB2A8001FA6B7 /* SSZipArchive.m */; };
+		F3979AFB1F4AB2A8001FA6B7 /* UnzipFirmware.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979ADA1F4AB2A8001FA6B7 /* UnzipFirmware.h */; };
+		F3979AFC1F4AB2A8001FA6B7 /* UnzipFirmware.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979ADB1F4AB2A8001FA6B7 /* UnzipFirmware.m */; };
+		F3979B001F4AB323001FA6B7 /* LSAlertVierw.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979AFE1F4AB323001FA6B7 /* LSAlertVierw.h */; };
+		F3979B011F4AB323001FA6B7 /* LSAlertVierw.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979AFF1F4AB323001FA6B7 /* LSAlertVierw.m */; };
+		F3979B051F4AB3A0001FA6B7 /* AccessFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979B031F4AB3A0001FA6B7 /* AccessFileSystem.h */; };
+		F3979B061F4AB3A0001FA6B7 /* AccessFileSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979B041F4AB3A0001FA6B7 /* AccessFileSystem.m */; };
+		F3979B091F4AB429001FA6B7 /* DFUTool.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979B071F4AB429001FA6B7 /* DFUTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3979B0A1F4AB429001FA6B7 /* DFUTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979B081F4AB429001FA6B7 /* DFUTool.m */; };
+		F3979B0D1F4AB4AE001FA6B7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F3979B0C1F4AB4AE001FA6B7 /* libz.tbd */; };
+		F3979B101F4AB51F001FA6B7 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3979B0F1F4AB51F001FA6B7 /* CoreBluetooth.framework */; };
+		F3979B131F4AB8DE001FA6B7 /* DFUCommonDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979B121F4AB8B7001FA6B7 /* DFUCommonDefine.h */; };
+		F3979B1C1F4AC71D001FA6B7 /* DFUWZProtocolInterceptor.h in Headers */ = {isa = PBXBuildFile; fileRef = F3979B1A1F4AC71D001FA6B7 /* DFUWZProtocolInterceptor.h */; };
+		F3979B1D1F4AC71D001FA6B7 /* DFUWZProtocolInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F3979B1B1F4AC71D001FA6B7 /* DFUWZProtocolInterceptor.m */; };
+		F3AD710C1F4E79140033BF55 /* DFUTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F3AD710B1F4E79140033BF55 /* DFUTools.m */; };
+		F3C793391F4ACCBD00F7163D /* BabyBluetooth.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C793221F4ACCBD00F7163D /* BabyBluetooth.m */; };
+		F3C7933A1F4ACCBD00F7163D /* BabyCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C793241F4ACCBD00F7163D /* BabyCallback.m */; };
+		F3C7933B1F4ACCBD00F7163D /* BabyCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C793261F4ACCBD00F7163D /* BabyCentralManager.m */; };
+		F3C7933C1F4ACCBD00F7163D /* BabyDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C793281F4ACCBD00F7163D /* BabyDefine.m */; };
+		F3C7933D1F4ACCBD00F7163D /* BabyOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7932A1F4ACCBD00F7163D /* BabyOptions.m */; };
+		F3C7933E1F4ACCBD00F7163D /* BabyPeripheralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7932C1F4ACCBD00F7163D /* BabyPeripheralManager.m */; };
+		F3C7933F1F4ACCBD00F7163D /* BabyRhythm.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C7932E1F4ACCBD00F7163D /* BabyRhythm.m */; };
+		F3C793401F4ACCBD00F7163D /* BabySpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C793301F4ACCBD00F7163D /* BabySpeaker.m */; };
+		F3C793411F4ACCBD00F7163D /* BabyToy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C793321F4ACCBD00F7163D /* BabyToy.m */; };
+		F3C793421F4ACCBD00F7163D /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C793351F4ACCBD00F7163D /* SVIndefiniteAnimatedView.m */; };
+		F3C793431F4ACCBD00F7163D /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F3C793361F4ACCBD00F7163D /* SVProgressHUD.bundle */; };
+		F3C793441F4ACCBD00F7163D /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C793381F4ACCBD00F7163D /* SVProgressHUD.m */; };
+		F3C793481F4ACE0200F7163D /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C793461F4ACE0200F7163D /* UpdateViewController.m */; };
+		F3C793491F4ACE0200F7163D /* UpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3C793471F4ACE0200F7163D /* UpdateViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3979AAB1F4AB1F6001FA6B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3979A7F1F4AB1EA001FA6B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3979AA51F4AB1F6001FA6B7;
+			remoteInfo = DFUManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F3979AB21F4AB1F6001FA6B7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F3979AAE1F4AB1F6001FA6B7 /* DFUManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3F64CC48435EF73019A2903D /* Pods-DFU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DFU/Pods-DFU.debug.xcconfig"; sourceTree = "<group>"; };
+		5A024374778102AB6716BB32 /* Pods-DFU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFU.release.xcconfig"; path = "Pods/Target Support Files/Pods-DFU/Pods-DFU.release.xcconfig"; sourceTree = "<group>"; };
+		F3979A871F4AB1EA001FA6B7 /* DFU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DFU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3979A8B1F4AB1EA001FA6B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3979A8D1F4AB1EA001FA6B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3979A8E1F4AB1EA001FA6B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3979A901F4AB1EA001FA6B7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F3979A911F4AB1EA001FA6B7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F3979A941F4AB1EA001FA6B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3979A961F4AB1EA001FA6B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3979A991F4AB1EA001FA6B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3979A9B1F4AB1EA001FA6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3979AA61F4AB1F6001FA6B7 /* DFUManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DFUManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3979AA81F4AB1F6001FA6B7 /* DFUManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFUManager.h; sourceTree = "<group>"; };
+		F3979AA91F4AB1F6001FA6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3979AB41F4AB2A8001FA6B7 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		F3979AB51F4AB2A8001FA6B7 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		F3979AB71F4AB2A8001FA6B7 /* BLEOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEOperations.h; sourceTree = "<group>"; };
+		F3979AB81F4AB2A8001FA6B7 /* BLEOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEOperations.m; sourceTree = "<group>"; };
+		F3979AB91F4AB2A8001FA6B7 /* DFUOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUOperations.h; sourceTree = "<group>"; };
+		F3979ABA1F4AB2A8001FA6B7 /* DFUOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUOperations.m; sourceTree = "<group>"; };
+		F3979ABB1F4AB2A8001FA6B7 /* DFUOperationsDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUOperationsDetails.h; sourceTree = "<group>"; };
+		F3979ABC1F4AB2A8001FA6B7 /* DFUOperationsDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUOperationsDetails.m; sourceTree = "<group>"; };
+		F3979ABD1F4AB2A8001FA6B7 /* FileOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileOperations.h; sourceTree = "<group>"; };
+		F3979ABE1F4AB2A8001FA6B7 /* FileOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileOperations.m; sourceTree = "<group>"; };
+		F3979AC01F4AB2A8001FA6B7 /* DFUHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUHelper.h; sourceTree = "<group>"; };
+		F3979AC11F4AB2A8001FA6B7 /* DFUHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUHelper.m; sourceTree = "<group>"; };
+		F3979AC51F4AB2A8001FA6B7 /* IntelHex2BinConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntelHex2BinConverter.h; sourceTree = "<group>"; };
+		F3979AC61F4AB2A8001FA6B7 /* IntelHex2BinConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntelHex2BinConverter.m; sourceTree = "<group>"; };
+		F3979AC81F4AB2A8001FA6B7 /* InitData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitData.h; sourceTree = "<group>"; };
+		F3979AC91F4AB2A8001FA6B7 /* InitData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitData.m; sourceTree = "<group>"; };
+		F3979ACA1F4AB2A8001FA6B7 /* JsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParser.h; sourceTree = "<group>"; };
+		F3979ACB1F4AB2A8001FA6B7 /* JsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParser.m; sourceTree = "<group>"; };
+		F3979ACE1F4AB2A8001FA6B7 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		F3979ACF1F4AB2A8001FA6B7 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		F3979AD01F4AB2A8001FA6B7 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		F3979AD11F4AB2A8001FA6B7 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		F3979AD21F4AB2A8001FA6B7 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		F3979AD31F4AB2A8001FA6B7 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		F3979AD41F4AB2A8001FA6B7 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		F3979AD51F4AB2A8001FA6B7 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		F3979AD61F4AB2A8001FA6B7 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		F3979AD71F4AB2A8001FA6B7 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		F3979AD81F4AB2A8001FA6B7 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		F3979ADA1F4AB2A8001FA6B7 /* UnzipFirmware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnzipFirmware.h; sourceTree = "<group>"; };
+		F3979ADB1F4AB2A8001FA6B7 /* UnzipFirmware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnzipFirmware.m; sourceTree = "<group>"; };
+		F3979AFE1F4AB323001FA6B7 /* LSAlertVierw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSAlertVierw.h; sourceTree = "<group>"; };
+		F3979AFF1F4AB323001FA6B7 /* LSAlertVierw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSAlertVierw.m; sourceTree = "<group>"; };
+		F3979B031F4AB3A0001FA6B7 /* AccessFileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessFileSystem.h; sourceTree = "<group>"; };
+		F3979B041F4AB3A0001FA6B7 /* AccessFileSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessFileSystem.m; sourceTree = "<group>"; };
+		F3979B071F4AB429001FA6B7 /* DFUTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUTool.h; sourceTree = "<group>"; };
+		F3979B081F4AB429001FA6B7 /* DFUTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUTool.m; sourceTree = "<group>"; };
+		F3979B0C1F4AB4AE001FA6B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F3979B0F1F4AB51F001FA6B7 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		F3979B121F4AB8B7001FA6B7 /* DFUCommonDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFUCommonDefine.h; sourceTree = "<group>"; };
+		F3979B1A1F4AC71D001FA6B7 /* DFUWZProtocolInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUWZProtocolInterceptor.h; sourceTree = "<group>"; };
+		F3979B1B1F4AC71D001FA6B7 /* DFUWZProtocolInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUWZProtocolInterceptor.m; sourceTree = "<group>"; };
+		F3AD710A1F4E79140033BF55 /* DFUTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFUTools.h; sourceTree = "<group>"; };
+		F3AD710B1F4E79140033BF55 /* DFUTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFUTools.m; sourceTree = "<group>"; };
+		F3C793211F4ACCBD00F7163D /* BabyBluetooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyBluetooth.h; sourceTree = "<group>"; };
+		F3C793221F4ACCBD00F7163D /* BabyBluetooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyBluetooth.m; sourceTree = "<group>"; };
+		F3C793231F4ACCBD00F7163D /* BabyCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyCallback.h; sourceTree = "<group>"; };
+		F3C793241F4ACCBD00F7163D /* BabyCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyCallback.m; sourceTree = "<group>"; };
+		F3C793251F4ACCBD00F7163D /* BabyCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyCentralManager.h; sourceTree = "<group>"; };
+		F3C793261F4ACCBD00F7163D /* BabyCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyCentralManager.m; sourceTree = "<group>"; };
+		F3C793271F4ACCBD00F7163D /* BabyDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyDefine.h; sourceTree = "<group>"; };
+		F3C793281F4ACCBD00F7163D /* BabyDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyDefine.m; sourceTree = "<group>"; };
+		F3C793291F4ACCBD00F7163D /* BabyOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyOptions.h; sourceTree = "<group>"; };
+		F3C7932A1F4ACCBD00F7163D /* BabyOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyOptions.m; sourceTree = "<group>"; };
+		F3C7932B1F4ACCBD00F7163D /* BabyPeripheralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyPeripheralManager.h; sourceTree = "<group>"; };
+		F3C7932C1F4ACCBD00F7163D /* BabyPeripheralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyPeripheralManager.m; sourceTree = "<group>"; };
+		F3C7932D1F4ACCBD00F7163D /* BabyRhythm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyRhythm.h; sourceTree = "<group>"; };
+		F3C7932E1F4ACCBD00F7163D /* BabyRhythm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyRhythm.m; sourceTree = "<group>"; };
+		F3C7932F1F4ACCBD00F7163D /* BabySpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabySpeaker.h; sourceTree = "<group>"; };
+		F3C793301F4ACCBD00F7163D /* BabySpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabySpeaker.m; sourceTree = "<group>"; };
+		F3C793311F4ACCBD00F7163D /* BabyToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyToy.h; sourceTree = "<group>"; };
+		F3C793321F4ACCBD00F7163D /* BabyToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BabyToy.m; sourceTree = "<group>"; };
+		F3C793341F4ACCBD00F7163D /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		F3C793351F4ACCBD00F7163D /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		F3C793361F4ACCBD00F7163D /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		F3C793371F4ACCBD00F7163D /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		F3C793381F4ACCBD00F7163D /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		F3C793451F4ACE0200F7163D /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
+		F3C793461F4ACE0200F7163D /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
+		F3C793471F4ACE0200F7163D /* UpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateViewController.xib; sourceTree = "<group>"; };
+		F5D7366B4E138BC85C8138DF /* Pods_DFU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DFU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3979A841F4AB1EA001FA6B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3979AAD1F4AB1F6001FA6B7 /* DFUManager.framework in Frameworks */,
+				1029BE01B58319FE698F249F /* Pods_DFU.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3979AA21F4AB1F6001FA6B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3979B101F4AB51F001FA6B7 /* CoreBluetooth.framework in Frameworks */,
+				F3979B0D1F4AB4AE001FA6B7 /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C97FA0843C6546CE0C91C732 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F64CC48435EF73019A2903D /* Pods-DFU.debug.xcconfig */,
+				5A024374778102AB6716BB32 /* Pods-DFU.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F3979A7E1F4AB1EA001FA6B7 = {
+			isa = PBXGroup;
+			children = (
+				F3979A891F4AB1EA001FA6B7 /* DFU */,
+				F3979AA71F4AB1F6001FA6B7 /* DFUManager */,
+				F3979A881F4AB1EA001FA6B7 /* Products */,
+				F3979B0B1F4AB4AE001FA6B7 /* Frameworks */,
+				C97FA0843C6546CE0C91C732 /* Pods */,
+			);
+			indentWidth = 8;
+			sourceTree = "<group>";
+			tabWidth = 8;
+		};
+		F3979A881F4AB1EA001FA6B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3979A871F4AB1EA001FA6B7 /* DFU.app */,
+				F3979AA61F4AB1F6001FA6B7 /* DFUManager.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3979A891F4AB1EA001FA6B7 /* DFU */ = {
+			isa = PBXGroup;
+			children = (
+				F3C7931F1F4ACCBD00F7163D /* BabyBluetoothAppDemo */,
+				F3979A8D1F4AB1EA001FA6B7 /* AppDelegate.h */,
+				F3979A8E1F4AB1EA001FA6B7 /* AppDelegate.m */,
+				F3C793451F4ACE0200F7163D /* UpdateViewController.h */,
+				F3C793461F4ACE0200F7163D /* UpdateViewController.m */,
+				F3C793471F4ACE0200F7163D /* UpdateViewController.xib */,
+				F3979A901F4AB1EA001FA6B7 /* ViewController.h */,
+				F3979A911F4AB1EA001FA6B7 /* ViewController.m */,
+				F3AD710A1F4E79140033BF55 /* DFUTools.h */,
+				F3AD710B1F4E79140033BF55 /* DFUTools.m */,
+				F3979A931F4AB1EA001FA6B7 /* Main.storyboard */,
+				F3979A961F4AB1EA001FA6B7 /* Assets.xcassets */,
+				F3979A981F4AB1EA001FA6B7 /* LaunchScreen.storyboard */,
+				F3979A9B1F4AB1EA001FA6B7 /* Info.plist */,
+				F3979A8A1F4AB1EA001FA6B7 /* Supporting Files */,
+			);
+			path = DFU;
+			sourceTree = "<group>";
+		};
+		F3979A8A1F4AB1EA001FA6B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3979A8B1F4AB1EA001FA6B7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F3979AA71F4AB1F6001FA6B7 /* DFUManager */ = {
+			isa = PBXGroup;
+			children = (
+				F3979B191F4AC71D001FA6B7 /* DFUWZProtocolInterceptor */,
+				F3979B021F4AB3A0001FA6B7 /* FileSelection */,
+				F3979AFD1F4AB323001FA6B7 /* LSAlertView */,
+				F3979AB31F4AB2A8001FA6B7 /* Constants */,
+				F3979AB61F4AB2A8001FA6B7 /* DFUImplementation */,
+				F3979ABF1F4AB2A8001FA6B7 /* DFUViewController */,
+				F3979AC41F4AB2A8001FA6B7 /* HexToBinConverter */,
+				F3979AC71F4AB2A8001FA6B7 /* JSONParser */,
+				F3979ACC1F4AB2A8001FA6B7 /* SSZipArchive */,
+				F3979AD91F4AB2A8001FA6B7 /* Unzip */,
+				F3979AA81F4AB1F6001FA6B7 /* DFUManager.h */,
+				F3979B121F4AB8B7001FA6B7 /* DFUCommonDefine.h */,
+				F3979AA91F4AB1F6001FA6B7 /* Info.plist */,
+			);
+			path = DFUManager;
+			sourceTree = "<group>";
+		};
+		F3979AB31F4AB2A8001FA6B7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F3979AB41F4AB2A8001FA6B7 /* Utility.h */,
+				F3979AB51F4AB2A8001FA6B7 /* Utility.m */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F3979AB61F4AB2A8001FA6B7 /* DFUImplementation */ = {
+			isa = PBXGroup;
+			children = (
+				F3979AB71F4AB2A8001FA6B7 /* BLEOperations.h */,
+				F3979AB81F4AB2A8001FA6B7 /* BLEOperations.m */,
+				F3979AB91F4AB2A8001FA6B7 /* DFUOperations.h */,
+				F3979ABA1F4AB2A8001FA6B7 /* DFUOperations.m */,
+				F3979ABB1F4AB2A8001FA6B7 /* DFUOperationsDetails.h */,
+				F3979ABC1F4AB2A8001FA6B7 /* DFUOperationsDetails.m */,
+				F3979ABD1F4AB2A8001FA6B7 /* FileOperations.h */,
+				F3979ABE1F4AB2A8001FA6B7 /* FileOperations.m */,
+			);
+			path = DFUImplementation;
+			sourceTree = "<group>";
+		};
+		F3979ABF1F4AB2A8001FA6B7 /* DFUViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F3979AC01F4AB2A8001FA6B7 /* DFUHelper.h */,
+				F3979AC11F4AB2A8001FA6B7 /* DFUHelper.m */,
+				F3979B071F4AB429001FA6B7 /* DFUTool.h */,
+				F3979B081F4AB429001FA6B7 /* DFUTool.m */,
+			);
+			path = DFUViewController;
+			sourceTree = "<group>";
+		};
+		F3979AC41F4AB2A8001FA6B7 /* HexToBinConverter */ = {
+			isa = PBXGroup;
+			children = (
+				F3979AC51F4AB2A8001FA6B7 /* IntelHex2BinConverter.h */,
+				F3979AC61F4AB2A8001FA6B7 /* IntelHex2BinConverter.m */,
+			);
+			path = HexToBinConverter;
+			sourceTree = "<group>";
+		};
+		F3979AC71F4AB2A8001FA6B7 /* JSONParser */ = {
+			isa = PBXGroup;
+			children = (
+				F3979AC81F4AB2A8001FA6B7 /* InitData.h */,
+				F3979AC91F4AB2A8001FA6B7 /* InitData.m */,
+				F3979ACA1F4AB2A8001FA6B7 /* JsonParser.h */,
+				F3979ACB1F4AB2A8001FA6B7 /* JsonParser.m */,
+			);
+			path = JSONParser;
+			sourceTree = "<group>";
+		};
+		F3979ACC1F4AB2A8001FA6B7 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				F3979ACD1F4AB2A8001FA6B7 /* minizip */,
+				F3979AD71F4AB2A8001FA6B7 /* SSZipArchive.h */,
+				F3979AD81F4AB2A8001FA6B7 /* SSZipArchive.m */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		F3979ACD1F4AB2A8001FA6B7 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				F3979ACE1F4AB2A8001FA6B7 /* crypt.h */,
+				F3979ACF1F4AB2A8001FA6B7 /* ioapi.c */,
+				F3979AD01F4AB2A8001FA6B7 /* ioapi.h */,
+				F3979AD11F4AB2A8001FA6B7 /* mztools.c */,
+				F3979AD21F4AB2A8001FA6B7 /* mztools.h */,
+				F3979AD31F4AB2A8001FA6B7 /* unzip.c */,
+				F3979AD41F4AB2A8001FA6B7 /* unzip.h */,
+				F3979AD51F4AB2A8001FA6B7 /* zip.c */,
+				F3979AD61F4AB2A8001FA6B7 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		F3979AD91F4AB2A8001FA6B7 /* Unzip */ = {
+			isa = PBXGroup;
+			children = (
+				F3979ADA1F4AB2A8001FA6B7 /* UnzipFirmware.h */,
+				F3979ADB1F4AB2A8001FA6B7 /* UnzipFirmware.m */,
+			);
+			path = Unzip;
+			sourceTree = "<group>";
+		};
+		F3979AFD1F4AB323001FA6B7 /* LSAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				F3979AFE1F4AB323001FA6B7 /* LSAlertVierw.h */,
+				F3979AFF1F4AB323001FA6B7 /* LSAlertVierw.m */,
+			);
+			path = LSAlertView;
+			sourceTree = "<group>";
+		};
+		F3979B021F4AB3A0001FA6B7 /* FileSelection */ = {
+			isa = PBXGroup;
+			children = (
+				F3979B031F4AB3A0001FA6B7 /* AccessFileSystem.h */,
+				F3979B041F4AB3A0001FA6B7 /* AccessFileSystem.m */,
+			);
+			path = FileSelection;
+			sourceTree = "<group>";
+		};
+		F3979B0B1F4AB4AE001FA6B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3979B0F1F4AB51F001FA6B7 /* CoreBluetooth.framework */,
+				F3979B0C1F4AB4AE001FA6B7 /* libz.tbd */,
+				F5D7366B4E138BC85C8138DF /* Pods_DFU.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3979B191F4AC71D001FA6B7 /* DFUWZProtocolInterceptor */ = {
+			isa = PBXGroup;
+			children = (
+				F3979B1A1F4AC71D001FA6B7 /* DFUWZProtocolInterceptor.h */,
+				F3979B1B1F4AC71D001FA6B7 /* DFUWZProtocolInterceptor.m */,
+			);
+			path = DFUWZProtocolInterceptor;
+			sourceTree = "<group>";
+		};
+		F3C7931F1F4ACCBD00F7163D /* BabyBluetoothAppDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F3C793201F4ACCBD00F7163D /* BabyBluetooth */,
+				F3C793331F4ACCBD00F7163D /* SVProgressHUD */,
+			);
+			path = BabyBluetoothAppDemo;
+			sourceTree = "<group>";
+		};
+		F3C793201F4ACCBD00F7163D /* BabyBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				F3C793211F4ACCBD00F7163D /* BabyBluetooth.h */,
+				F3C793221F4ACCBD00F7163D /* BabyBluetooth.m */,
+				F3C793231F4ACCBD00F7163D /* BabyCallback.h */,
+				F3C793241F4ACCBD00F7163D /* BabyCallback.m */,
+				F3C793251F4ACCBD00F7163D /* BabyCentralManager.h */,
+				F3C793261F4ACCBD00F7163D /* BabyCentralManager.m */,
+				F3C793271F4ACCBD00F7163D /* BabyDefine.h */,
+				F3C793281F4ACCBD00F7163D /* BabyDefine.m */,
+				F3C793291F4ACCBD00F7163D /* BabyOptions.h */,
+				F3C7932A1F4ACCBD00F7163D /* BabyOptions.m */,
+				F3C7932B1F4ACCBD00F7163D /* BabyPeripheralManager.h */,
+				F3C7932C1F4ACCBD00F7163D /* BabyPeripheralManager.m */,
+				F3C7932D1F4ACCBD00F7163D /* BabyRhythm.h */,
+				F3C7932E1F4ACCBD00F7163D /* BabyRhythm.m */,
+				F3C7932F1F4ACCBD00F7163D /* BabySpeaker.h */,
+				F3C793301F4ACCBD00F7163D /* BabySpeaker.m */,
+				F3C793311F4ACCBD00F7163D /* BabyToy.h */,
+				F3C793321F4ACCBD00F7163D /* BabyToy.m */,
+			);
+			path = BabyBluetooth;
+			sourceTree = "<group>";
+		};
+		F3C793331F4ACCBD00F7163D /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F3C793341F4ACCBD00F7163D /* SVIndefiniteAnimatedView.h */,
+				F3C793351F4ACCBD00F7163D /* SVIndefiniteAnimatedView.m */,
+				F3C793361F4ACCBD00F7163D /* SVProgressHUD.bundle */,
+				F3C793371F4ACCBD00F7163D /* SVProgressHUD.h */,
+				F3C793381F4ACCBD00F7163D /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F3979AA31F4AB1F6001FA6B7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3979AE41F4AB2A8001FA6B7 /* FileOperations.h in Headers */,
+				F3979AF91F4AB2A8001FA6B7 /* SSZipArchive.h in Headers */,
+				F3979AEE1F4AB2A8001FA6B7 /* JsonParser.h in Headers */,
+				F3979B131F4AB8DE001FA6B7 /* DFUCommonDefine.h in Headers */,
+				F3979AE01F4AB2A8001FA6B7 /* DFUOperations.h in Headers */,
+				F3979AF01F4AB2A8001FA6B7 /* crypt.h in Headers */,
+				F3979AAA1F4AB1F6001FA6B7 /* DFUManager.h in Headers */,
+				F3979AFB1F4AB2A8001FA6B7 /* UnzipFirmware.h in Headers */,
+				F3979AE21F4AB2A8001FA6B7 /* DFUOperationsDetails.h in Headers */,
+				F3979AF61F4AB2A8001FA6B7 /* unzip.h in Headers */,
+				F3979AE61F4AB2A8001FA6B7 /* DFUHelper.h in Headers */,
+				F3979B001F4AB323001FA6B7 /* LSAlertVierw.h in Headers */,
+				F3979B051F4AB3A0001FA6B7 /* AccessFileSystem.h in Headers */,
+				F3979B1C1F4AC71D001FA6B7 /* DFUWZProtocolInterceptor.h in Headers */,
+				F3979AF41F4AB2A8001FA6B7 /* mztools.h in Headers */,
+				F3979ADE1F4AB2A8001FA6B7 /* BLEOperations.h in Headers */,
+				F3979ADC1F4AB2A8001FA6B7 /* Utility.h in Headers */,
+				F3979AF21F4AB2A8001FA6B7 /* ioapi.h in Headers */,
+				F3979AEA1F4AB2A8001FA6B7 /* IntelHex2BinConverter.h in Headers */,
+				F3979AEC1F4AB2A8001FA6B7 /* InitData.h in Headers */,
+				F3979B091F4AB429001FA6B7 /* DFUTool.h in Headers */,
+				F3979AF81F4AB2A8001FA6B7 /* zip.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F3979A861F4AB1EA001FA6B7 /* DFU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3979A9E1F4AB1EA001FA6B7 /* Build configuration list for PBXNativeTarget "DFU" */;
+			buildPhases = (
+				18BDA1882A1FE01B5E417AC0 /* [CP] Check Pods Manifest.lock */,
+				F3979A831F4AB1EA001FA6B7 /* Sources */,
+				F3979A841F4AB1EA001FA6B7 /* Frameworks */,
+				F3979A851F4AB1EA001FA6B7 /* Resources */,
+				F3979AB21F4AB1F6001FA6B7 /* Embed Frameworks */,
+				2989293376173B666EAE2CD4 /* [CP] Embed Pods Frameworks */,
+				52340EA044DC630F9744721E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3979AAC1F4AB1F6001FA6B7 /* PBXTargetDependency */,
+			);
+			name = DFU;
+			productName = DFU;
+			productReference = F3979A871F4AB1EA001FA6B7 /* DFU.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3979AA51F4AB1F6001FA6B7 /* DFUManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3979AAF1F4AB1F6001FA6B7 /* Build configuration list for PBXNativeTarget "DFUManager" */;
+			buildPhases = (
+				F3979AA11F4AB1F6001FA6B7 /* Sources */,
+				F3979AA21F4AB1F6001FA6B7 /* Frameworks */,
+				F3979AA31F4AB1F6001FA6B7 /* Headers */,
+				F3979AA41F4AB1F6001FA6B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DFUManager;
+			productName = DFUManager;
+			productReference = F3979AA61F4AB1F6001FA6B7 /* DFUManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3979A7F1F4AB1EA001FA6B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = minlison;
+				TargetAttributes = {
+					F3979A861F4AB1EA001FA6B7 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 694YU37J6Y;
+						ProvisioningStyle = Automatic;
+					};
+					F3979AA51F4AB1F6001FA6B7 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 694YU37J6Y;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F3979A821F4AB1EA001FA6B7 /* Build configuration list for PBXProject "DFU" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3979A7E1F4AB1EA001FA6B7;
+			productRefGroup = F3979A881F4AB1EA001FA6B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3979A861F4AB1EA001FA6B7 /* DFU */,
+				F3979AA51F4AB1F6001FA6B7 /* DFUManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3979A851F4AB1EA001FA6B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3979A9A1F4AB1EA001FA6B7 /* LaunchScreen.storyboard in Resources */,
+				F3C793491F4ACE0200F7163D /* UpdateViewController.xib in Resources */,
+				F3979A971F4AB1EA001FA6B7 /* Assets.xcassets in Resources */,
+				F3979A951F4AB1EA001FA6B7 /* Main.storyboard in Resources */,
+				F3C793431F4ACCBD00F7163D /* SVProgressHUD.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3979AA41F4AB1F6001FA6B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18BDA1882A1FE01B5E417AC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2989293376173B666EAE2CD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DFU/Pods-DFU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52340EA044DC630F9744721E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DFU/Pods-DFU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3979A831F4AB1EA001FA6B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C7933C1F4ACCBD00F7163D /* BabyDefine.m in Sources */,
+				F3C793421F4ACCBD00F7163D /* SVIndefiniteAnimatedView.m in Sources */,
+				F3C793481F4ACE0200F7163D /* UpdateViewController.m in Sources */,
+				F3C7933F1F4ACCBD00F7163D /* BabyRhythm.m in Sources */,
+				F3C793441F4ACCBD00F7163D /* SVProgressHUD.m in Sources */,
+				F3AD710C1F4E79140033BF55 /* DFUTools.m in Sources */,
+				F3979A921F4AB1EA001FA6B7 /* ViewController.m in Sources */,
+				F3C7933D1F4ACCBD00F7163D /* BabyOptions.m in Sources */,
+				F3979A8F1F4AB1EA001FA6B7 /* AppDelegate.m in Sources */,
+				F3C7933E1F4ACCBD00F7163D /* BabyPeripheralManager.m in Sources */,
+				F3C793391F4ACCBD00F7163D /* BabyBluetooth.m in Sources */,
+				F3C7933B1F4ACCBD00F7163D /* BabyCentralManager.m in Sources */,
+				F3C793401F4ACCBD00F7163D /* BabySpeaker.m in Sources */,
+				F3C7933A1F4ACCBD00F7163D /* BabyCallback.m in Sources */,
+				F3C793411F4ACCBD00F7163D /* BabyToy.m in Sources */,
+				F3979A8C1F4AB1EA001FA6B7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3979AA11F4AB1F6001FA6B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3979ADD1F4AB2A8001FA6B7 /* Utility.m in Sources */,
+				F3979AE71F4AB2A8001FA6B7 /* DFUHelper.m in Sources */,
+				F3979B011F4AB323001FA6B7 /* LSAlertVierw.m in Sources */,
+				F3979B1D1F4AC71D001FA6B7 /* DFUWZProtocolInterceptor.m in Sources */,
+				F3979AF31F4AB2A8001FA6B7 /* mztools.c in Sources */,
+				F3979AEF1F4AB2A8001FA6B7 /* JsonParser.m in Sources */,
+				F3979AF51F4AB2A8001FA6B7 /* unzip.c in Sources */,
+				F3979B061F4AB3A0001FA6B7 /* AccessFileSystem.m in Sources */,
+				F3979AED1F4AB2A8001FA6B7 /* InitData.m in Sources */,
+				F3979AE51F4AB2A8001FA6B7 /* FileOperations.m in Sources */,
+				F3979AE11F4AB2A8001FA6B7 /* DFUOperations.m in Sources */,
+				F3979AE31F4AB2A8001FA6B7 /* DFUOperationsDetails.m in Sources */,
+				F3979AF11F4AB2A8001FA6B7 /* ioapi.c in Sources */,
+				F3979B0A1F4AB429001FA6B7 /* DFUTool.m in Sources */,
+				F3979AFA1F4AB2A8001FA6B7 /* SSZipArchive.m in Sources */,
+				F3979AF71F4AB2A8001FA6B7 /* zip.c in Sources */,
+				F3979AFC1F4AB2A8001FA6B7 /* UnzipFirmware.m in Sources */,
+				F3979AEB1F4AB2A8001FA6B7 /* IntelHex2BinConverter.m in Sources */,
+				F3979ADF1F4AB2A8001FA6B7 /* BLEOperations.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3979AAC1F4AB1F6001FA6B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3979AA51F4AB1F6001FA6B7 /* DFUManager */;
+			targetProxy = F3979AAB1F4AB1F6001FA6B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3979A931F4AB1EA001FA6B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3979A941F4AB1EA001FA6B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3979A981F4AB1EA001FA6B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3979A991F4AB1EA001FA6B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3979A9C1F4AB1EA001FA6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F3979A9D1F4AB1EA001FA6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3979A9F1F4AB1EA001FA6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F64CC48435EF73019A2903D /* Pods-DFU.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 694YU37J6Y;
+				INFOPLIST_FILE = DFU/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.yizmh.DFU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F3979AA01F4AB1EA001FA6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A024374778102AB6716BB32 /* Pods-DFU.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 694YU37J6Y;
+				INFOPLIST_FILE = DFU/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.yizmh.DFU;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F3979AB01F4AB1F6001FA6B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 694YU37J6Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DFUManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.yizmh.DFUManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3979AB11F4AB1F6001FA6B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 694YU37J6Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DFUManager/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.yizmh.DFUManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3979A821F4AB1EA001FA6B7 /* Build configuration list for PBXProject "DFU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3979A9C1F4AB1EA001FA6B7 /* Debug */,
+				F3979A9D1F4AB1EA001FA6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3979A9E1F4AB1EA001FA6B7 /* Build configuration list for PBXNativeTarget "DFU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3979A9F1F4AB1EA001FA6B7 /* Debug */,
+				F3979AA01F4AB1EA001FA6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3979AAF1F4AB1F6001FA6B7 /* Build configuration list for PBXNativeTarget "DFUManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3979AB01F4AB1F6001FA6B7 /* Debug */,
+				F3979AB11F4AB1F6001FA6B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3979A7F1F4AB1EA001FA6B7 /* Project object */;
+}
